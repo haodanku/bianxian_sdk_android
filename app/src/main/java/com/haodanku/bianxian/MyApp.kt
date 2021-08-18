@@ -2,6 +2,7 @@ package com.haodanku.bianxian
 
 import android.app.Application
 import android.util.Log
+import android.widget.Toast
 import com.haodanku.sdk.Hdk
 
 /**
@@ -19,6 +20,7 @@ class MyApp : Application() {
         Hdk.init(this, "demo", "demo", object : Hdk.InitCallback {
             override fun onResult(code: Int, message: String) {
                 Log.e("MyApp", "code:$code, msg:$message")
+                Toast.makeText(this@MyApp,"code:$code, msg:$message",Toast.LENGTH_SHORT).show()
             }
         })
     }

@@ -17,7 +17,7 @@ dependencies {
 }
 ```
 ### 方式二：手动引入
-点击下载：[最新版 SDK](https://www.haodanku.com/)  
+点击下载：[最新版 SDK](http://files-fqapps-com.cdn.fudaiapp.com/app-hdksdk1-20210818-181341.zip)  
 1、将 **aar** 包放到 **libs** 文件夹（**aar** 包的版本以当时最新的为准）：
 ![WX20210816-174700@2x.png](https://cdn.nlark.com/yuque/0/2021/png/626389/1629107246517-ecf76d8c-9531-4e40-a599-16f871f19b2d.png#clientId=u82877699-3348-4&from=paste&height=129&id=uedeed90d&margin=%5Bobject%20Object%5D&name=WX20210816-174700%402x.png&originHeight=258&originWidth=688&originalType=binary&ratio=1&size=20059&status=done&style=none&taskId=u4463396a-057c-4675-90b8-b37ea291b1b&width=344)  
 2、在 **app module** 的 **gradle** 文件中添加对 **aar** 包的依赖：
