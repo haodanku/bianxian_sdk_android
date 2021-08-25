@@ -19,8 +19,7 @@ class MyApp : Application() {
         // 请将以下的 appKey 和 appSecret 更换为在好单库变现平台正式申请的
         Hdk.init(this, "demo", "demo", object : Hdk.InitCallback {
             override fun onResult(code: Int, message: String) {
-                Log.e("MyApp", "code:$code, msg:$message")
-                Toast.makeText(this@MyApp,"code:$code, msg:$message",Toast.LENGTH_SHORT).show()
+                Log.d("MyApp", "code:$code, msg:$message")
             }
         })
     }
