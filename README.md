@@ -14,7 +14,7 @@ allprojects {
 2、在 **app module** 的 **gradle** 文件中引入好单库变现 **SDK** 的依赖：   
 ```groovy
 dependencies {
-    implementation 'com.haodanku.sdk:bianxian:1.0.1'
+    implementation 'com.haodanku.sdk:bianxian:1.0.5'
 }
 ```
 

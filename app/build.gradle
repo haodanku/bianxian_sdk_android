@@ -42,6 +42,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     
     //通过 Gradle 的方式接入
-//    implementation 'com.haodanku.sdk:bianxian:1.0.1'
+//    implementation 'com.haodanku.sdk:bianxian:1.0.5'
 
 }
