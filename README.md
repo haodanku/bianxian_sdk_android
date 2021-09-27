@@ -14,7 +14,7 @@ allprojects {
 2、在 **app module** 的 **gradle** 文件中引入好单库变现 **SDK** 的依赖：   
 ```groovy
 dependencies {
-    implementation 'com.haodanku.sdk:bianxian:1.0.5'
+    implementation 'com.haodanku.sdk:bianxian:1.0.7'
 }
 ```
 
@@ -47,6 +47,7 @@ dependencies {
 ## 三、SDK 的使用
 ### 1、初始化
 建议在 **Application** 中对 **SDK** 进行初始化：   
+
 ```kotlin
 class MyApp : Application() {
 
@@ -65,20 +66,58 @@ class MyApp : Application() {
 
 ### 2、日志显示   
 如果需要显示错误日志，打印到 **log** ，通过 **setDebug** 方法开启：   
+
 ```kotlin
 Hdk.setDebug(true)
 ```
 
 ### 3、打开变现主页  
 通过 **openIndexPage** 方法可以打开好单库的变现主页：   
+
 ```kotlin
 Hdk.openIndexPage()
 ```
 
 ### 4、获取单个页面
-如果需要单个页面（目前只提供首页），可以使用以下方法获取 Fragment ，然后再将 Fragment 添加到您需要放置的地方：    
+如果需要单个页面（目前只提供首页），可以使用以下方法获取 Fragment ，然后再将 Fragment 添加到您需要放置的地方：  
+
 ```kotlin
 val fragment = Hdk.getSinglePage(SinglePage.MAIN)
+```
+
+### 5、通过 API 接口接入打开页面(v1.0.7版本开始支持)
+根据接口返回的 **jump** 参数，可以使用以下方法直接打开相应的页面。
+
+```kotlin
+Hdk.openSinglePage(jump: String?)
+```
+
+### 6、打开金刚区相应的板块页面(v1.0.7版本开始支持)
+通过一个方法即可直达打开金刚区某个模块，减少接入成本。**SDK** 提供以下方法可以直接打开：
+
+```kotlin
+/**
+ * 跳转到单个按钮区域单页
+ * @param nav 页面类型[NavPage.NavType]
+*/
+fun jumpNav(@NavPage.NavType nav: Int)
+```
+
+其中 NavType 类型有：
+```java
+public class NavPage {
+
+    public static final int JD = 1;      		//京东
+    public static final int PDD = 2;			//拼多多
+    public static final int VIP = 3;			//唯品会
+    public static final int MEI_TUAN = 4;		//美团外卖
+    public static final int PHONE_BILL = 5;		//话费充值
+    public static final int XIAN_BAO = 6;		//福利线报
+    public static final int EPIDEMIC_AREA = 7;	//防疫专区
+    public static final int KFC = 8;			//肯德基
+    public static final int MOVIE = 9;			//电影票
+
+}
 ```
 
 ## 四、混淆配置
@@ -112,6 +151,7 @@ SDK 自带混淆，接入方无需单独配置混淆规则。
 （3）**SDK** 依赖的库有：   
 ```groovy
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.20"
+    //implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.32"  v1.0.7 版本后降级为 1.4.32
     implementation 'androidx.core:core-ktx:1.3.1'
     implementation 'androidx.appcompat:appcompat:1.2.0'
 ```
@@ -119,4 +159,7 @@ SDK 自带混淆，接入方无需单独配置混淆规则。
 
 ### 3、隐私政策
 **SDK**目前采用 **imei **作为设备的唯一标识**，**需要在隐私政策中**告知用户。**
+
+### 4、Demo 下载
+下载链接：[https://github.com/haodanku/bianxian_sdk_android](https://github.com/haodanku/bianxian_sdk_android)
 

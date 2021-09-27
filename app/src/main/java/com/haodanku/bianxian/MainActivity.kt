@@ -9,6 +9,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.haodanku.bianxian.adt.DemoAdapter
 import com.haodanku.sdk.Hdk
 import com.haodanku.sdk.entry.SinglePage
 
@@ -31,21 +32,15 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = demoAdapter
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            tab.text = "Tab ${(position + 1)}"
+            tab.text = when (position) {
+                0 -> "首页"
+                1 -> "嵌入"
+                2 -> "API"
+                3 -> "模块"
+                else -> "tab"
+            }
         }.attach()
 
     }
 
-    class DemoAdapter(aty: FragmentActivity) : FragmentStateAdapter(aty) {
-
-        override fun getItemCount(): Int = 4
-
-        override fun createFragment(position: Int): Fragment {
-            return if (position == 1) {
-                Hdk.getSinglePage(SinglePage.MAIN) ?: DemoFragment()
-            } else {
-                DemoFragment()
-            }
-        }
-    }
 }
