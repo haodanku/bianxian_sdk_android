@@ -14,7 +14,7 @@ allprojects {
 2、在 **app module** 的 **gradle** 文件中引入好单库变现 **SDK** 的依赖：   
 ```groovy
 dependencies {
-    implementation 'com.haodanku.sdk:bianxian:1.0.7'
+    implementation 'com.haodanku.sdk:bianxian:1.0.8'
 }
 ```
 
@@ -89,7 +89,7 @@ val fragment = Hdk.getSinglePage(SinglePage.MAIN)
 根据接口返回的 **jump** 参数，可以使用以下方法直接打开相应的页面。
 
 ```kotlin
-Hdk.openSinglePage(jump: String?)
+fun jumpPage(jump: String?)
 ```
 
 ### 6、打开金刚区相应的板块页面(v1.0.7版本开始支持)
