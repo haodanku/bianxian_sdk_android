@@ -14,7 +14,7 @@ allprojects {
 2、在 **app module** 的 **gradle** 文件中引入好单库变现 **SDK** 的依赖：   
 ```groovy
 dependencies {
-    implementation 'com.haodanku.sdk:bianxian:1.0.8'
+    implementation 'com.haodanku.sdk:bianxian:1.0.9'
 }
 ```
 
@@ -116,6 +116,7 @@ public class NavPage {
     public static final int EPIDEMIC_AREA = 7;	//防疫专区
     public static final int KFC = 8;			//肯德基
     public static final int MOVIE = 9;			//电影票
+    public static final int ELE = 10;			//饿了么（v1.0.9+ 支持）
 
 }
 ```
