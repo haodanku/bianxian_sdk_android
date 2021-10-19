@@ -57,6 +57,9 @@ class GridFragment : Fragment() {
         binding.btnMovie.setOnClickListener {
             Hdk.jumpNav(NavPage.MOVIE)
         }
+        binding.btnEle.setOnClickListener {
+            Hdk.jumpNav(NavPage.ELE)
+        }
     }
 
 }
