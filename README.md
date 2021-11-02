@@ -14,7 +14,7 @@ allprojects {
 2、在 **app module** 的 **gradle** 文件中引入好单库变现 **SDK** 的依赖：   
 ```groovy
 dependencies {
-    implementation 'com.haodanku.sdk:bianxian:1.0.9'
+    implementation 'com.haodanku.sdk:bianxian:1.0.10'
 }
 ```
 
@@ -58,7 +58,7 @@ class MyApp : Application() {
             override fun onResult(code: Int, message: String) {
                 Log.e("MyApp", "code:$code, msg:$message")
             }
-        })
+        }, false /* v1.0.10 后，增加是否需要在多进程中初始化的参数，默认只在主进程中初始化*/)
     }
     
 }
@@ -159,7 +159,7 @@ SDK 自带混淆，接入方无需单独配置混淆规则。
 接入前请确保已经添加以上的库依赖。   
 
 ### 3、隐私政策
-**SDK**目前采用 **imei **作为设备的唯一标识**，**需要在隐私政策中**告知用户。**
+目前采用 **AndroidID** 作为设备的唯一标识，**需要在隐私政策中** 告知用户。
 
 ### 4、Demo 下载
 下载链接：[https://github.com/haodanku/bianxian_sdk_android](https://github.com/haodanku/bianxian_sdk_android)
