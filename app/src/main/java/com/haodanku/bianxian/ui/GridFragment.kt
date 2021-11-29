@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.haodanku.bianxian.databinding.FragmentGridBinding
 import com.haodanku.sdk.Hdk
+import com.haodanku.sdk.entry.ModulePage
 import com.haodanku.sdk.entry.NavPage
 
 /**
@@ -59,6 +60,11 @@ class GridFragment : Fragment() {
         }
         binding.btnEle.setOnClickListener {
             Hdk.jumpNav(NavPage.ELE)
+        }
+        binding.btnWallet.setOnClickListener {
+            val params = HashMap<String,String>()
+            params["token"] ="KhUI7Pp2aWgKKL9L"
+            Hdk.jumpModule(ModulePage.WALLET,params)
         }
     }
 

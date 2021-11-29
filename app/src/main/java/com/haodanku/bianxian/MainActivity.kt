@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
                 1 -> "嵌入"
                 2 -> "API"
                 3 -> "模块"
+                4 -> "列表控件"
                 else -> "tab"
             }
         }.attach()

@@ -6,6 +6,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.haodanku.bianxian.ui.DemoFragment
 import com.haodanku.bianxian.ui.ApiFragment
 import com.haodanku.bianxian.ui.GridFragment
+import com.haodanku.bianxian.ui.ModuleFragment
 import com.haodanku.sdk.Hdk
 import com.haodanku.sdk.entry.SinglePage
 
@@ -16,7 +17,7 @@ import com.haodanku.sdk.entry.SinglePage
  */
 class DemoAdapter(aty: FragmentActivity) : FragmentStateAdapter(aty) {
 
-    override fun getItemCount(): Int = 4
+    override fun getItemCount(): Int = 5
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
@@ -24,8 +25,11 @@ class DemoAdapter(aty: FragmentActivity) : FragmentStateAdapter(aty) {
             1 -> Hdk.getSinglePage(SinglePage.MAIN) ?: DemoFragment()
             2 -> ApiFragment()
             3 -> GridFragment()
+            4 -> ModuleFragment()
             else -> DemoFragment()
         }
     }
+
+
 
 }
