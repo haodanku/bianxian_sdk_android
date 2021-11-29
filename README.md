@@ -188,6 +188,7 @@ SDK 自带混淆，接入方无需单独配置混淆规则。
 ## 五、注意事项
 ### 1、Android P 以上设备 https 网络处理
 如果遇到 **Cleartext HTTP traffic to xxx not permitted** 或者页面显示“**网页无法打开 net::ERR_CLEARTEXT_NOT_PERMITTED**”问题，需要进行以下配置。
+
 （1）在 **res** 文件夹下创建一个 **xml** 文件夹，然后创建一个 **network_security_config.xml** 文件，文件内容如下：
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
