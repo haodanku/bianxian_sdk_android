@@ -215,7 +215,7 @@ SDK 自带混淆，接入方无需单独配置混淆规则。
 	implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.32"
     implementation 'androidx.core:core-ktx:1.3.1'
     implementation 'androidx.appcompat:appcompat:1.2.0'
-	implementation 'com.google.android.material:material:1.3.0'
+    implementation 'com.google.android.material:material:1.3.0'
 ```
 接入前请确保已经添加以上的库依赖。
 ### 3、隐私政策
