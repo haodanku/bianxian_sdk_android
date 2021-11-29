@@ -212,7 +212,7 @@ SDK 自带混淆，接入方无需单独配置混淆规则。
 （2）**SDK** 为 **Kotlin** 项目，纯 **Java** 项目需要添加对 **Kotlin** 的支持。
 （3）**SDK** 依赖的库有：
 ```groovy
-	implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.32"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.32"
     implementation 'androidx.core:core-ktx:1.3.1'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
