@@ -318,7 +318,6 @@ SDK 自带混淆，接入方无需单独配置混淆规则。<br />​<br />
 接入前请确保已经添加以上的库依赖。
 
  ###  3、隐私政策
- ** SDK ** 目前采用 **AndroidID **作为设备的唯一标识**，**需要在隐私政策中**告知用户。**<br />隐私政策链接：[https://bianxian.haodanku.com/index/privacy](https://bianxian.haodanku.com/index/privacy)<br />​<br />
-<a name="PecCQ"></a>
+ ** SDK ** 目前采用 **AndroidID **作为设备的唯一标识**，**需要在隐私政策中**告知用户。**<br />隐私政策链接：[https://bianxian.haodanku.com/index/privacy](https://bianxian.haodanku.com/index/privacy)<br />
 ### 4、Demo 下载
 下载链接：[https://github.com/haodanku/bianxian_sdk_android](https://github.com/haodanku/bianxian_sdk_android)
