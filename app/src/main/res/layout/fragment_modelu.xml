@@ -10,10 +10,11 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <FrameLayout
-            android:id="@+id/hdk_worth_buy_contairfl"
+        <LinearLayout
+            android:id="@+id/hdk_worth_buy_contairll"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/goods_ry"

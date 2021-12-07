@@ -15,8 +15,10 @@ import com.haodanku.bianxian.databinding.FragmentGridBinding
 import com.haodanku.bianxian.databinding.FragmentModeluBinding
 import com.haodanku.bianxian.dp
 import com.haodanku.bianxian.ui.adapter.GoodsItemAdapter
+import com.haodanku.bianxian.ui.adapter.ImageAdapter
 import com.haodanku.sdk.Hdk
 import com.haodanku.sdk.callback.HdkElementListener
+import com.haodanku.sdk.entry.config.PorcelainConfig
 import com.haodanku.sdk.entry.config.WorthBuyingTodayConfig
 
 /**
@@ -61,7 +63,21 @@ class ModuleFragment : Fragment(){
             }
 
             override fun onSuccess(hdkElement: View) {
-                binding.hdkWorthBuyContairfl.addView(hdkElement)
+                binding.hdkWorthBuyContairll.addView(hdkElement)
+            }
+
+        })
+
+        val porcelainConfig = PorcelainConfig()
+        porcelainConfig.setMargin(10,10,10,10)
+        porcelainConfig.proxyImage =  ImageAdapter(binding.hdkWorthBuyContairll.context)
+        Hdk.loadElement(context,porcelainConfig,object :HdkElementListener{
+            override fun onError(code: Int, error: String) {
+                Log.e("ModuleFragment", "onError: $error")
+            }
+
+            override fun onSuccess(hdkElement: View) {
+                binding.hdkWorthBuyContairll.addView(hdkElement)
             }
 
         })
