@@ -300,8 +300,7 @@ SDK 自带混淆，接入方无需单独配置混淆规则。<br />​<br />
 （2）接着，在 **AndroidManifest.xml** 文件下的 **application** 标签增加以下属性：
 ```xml
 <application
-	android:networkSecurityConfig="@xml/network_security_config"
-/>
+	android:networkSecurityConfig="@xml/network_security_config"/>
 ```
 
  ###  2、兼容和依赖说明
