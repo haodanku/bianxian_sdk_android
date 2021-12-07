@@ -307,6 +307,7 @@ SDK 自带混淆，接入方无需单独配置混淆规则。<br />​<br />
 <a name="K4szr"></a>
 ### 2、兼容和依赖说明
 （1）**SDK** 目前仅兼容 **Android 5.0（API 21）** 以上设备，且目前只提供 **androidx** 的版本 。<br />（2）**SDK** 为 **Kotlin** 项目，纯 **Java** 项目需要添加对 **Kotlin** 的支持。<br />（3）**SDK** 依赖的库有：
+
 ```groovy
 	implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.32"
     implementation 'androidx.core:core-ktx:1.3.1'
